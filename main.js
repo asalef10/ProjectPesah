@@ -4,7 +4,7 @@ const LinkFetch = ("https://next.json-generator.com/api/json/get/NJ-UoW2Xq")
 let UserArry = []
 
 
-function fetchFunction() {  
+function fetchFunction() {
     return fetch(LinkFetch)
         .then((response) => { return response.json() })
 }
@@ -15,7 +15,7 @@ async function functionGetUser() {
         UserArry.forEach(element => {
             UsersCard.innerHTML += ` 
             <div class="card" <div id="UserID${UserID}" style="width: 17rem;">
-            <img src="${element.picture}" class="card-img-top" alt="...">
+            <img src=" ${element.picture} " class="card-img-top" alt="photoUserId">
              <div class="card-body">
             <h5 class="card-title"> FullName: ${element.name.first}  ${element.name.last}</h5><br>
             <p class="card-text"> Email: ${element.email}<br>
@@ -120,7 +120,7 @@ async function printOneUser(userID) {
 
  <div class="container">
  <div class="card" style="width:350px">
-  <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHvVFkxvOGN8GWn20cZphc2822XbYr6-QKW2v_YkGmoWKFx0y223av9s46wSRSmge9yTk&usqp=CAU" alt="Card image" style="width:100%">
+  <img class="card-img-top" src="${UserArry[userID].picture}">
   <div class="card-body">
     <h4 class="card-title">FullName: ${UserArry[userID].name.first} ${UserArry[userID].name.last} </h4>
     <p class="card-text">Email Addres: ${UserArry[userID].email}</p>
