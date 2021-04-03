@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+<div id="userInformation">
+
+    <body>
+        <header>
+
+            <nav id="nav" class="navbar navbar-expand-sm bg-dark navbar-dark">
+                
+                <a class="navbar-brand" href="https://tech-career-alternative.firebaseapp.com/"> <img
+                        src="https://tech-career-alternative.firebaseapp.com/image001.png" width="35%"></a>
+                <a class="navbar-brand"
+                    href="https://www.facebook.com/Codein-%D7%94%D7%93%D7%A8%D7%9A-%D7%A9%D7%9C%D7%9A-%D7%9C%D7%94%D7%99%D7%99%D7%98%D7%A7-106290231057543/">
+                    <img id="imgCodeIn" src="CODEINIMG.jfif" width="12%"></a>
+
+            </nav>
+            
+
+        </header>
+        <sidebar>
+
+
+            <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <button class="buttonNav" id="buttonTableUserId"> TableUser </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="buttonNav" id="buttonNewUserId">NewUser </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="buttonNav" id="buttonHomePage">HomePage </button>
+                    </li>
+                </ul>
+            </nav>
+        </sidebar>
+
+
+        <p id="UsersCard"></p>
+
+        <table class="table table-dark table-hover" id="UsersTable"> </table>
+
+
+
+        <div id="NewUser">
+            <form onsubmit="chekEmail()" class="form-inline">
+                <input  type="text"  class="form-control mb-2 mr-sm-2" id="UserName"  placeholder="Enter Your Name"
+                    name="UserName" required>
+                <br>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="UserLastName"
+                    placeholder="Enter Your Last Name" name="Enter Your Last Name" required >
+                <br>
+                <input type="email" class="form-control mb-2 mr-sm-2" id="FirstEmail" placeholder="Enter your Email"
+                    name="email" required >
+                <br>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="TwoEmail" placeholder=">Enter your Email Agin"
+                    name="email" required >
+                <br>
+                <input type="password" class="form-control mb-2 mr-sm-2" id="pwd2" placeholder="Enter password" name="pswd">
+                <div class="form-check mb-2 mr-sm-2">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="remember"  > Remember me
+                    </label>
+                </div>
+                <button type="submit" id="chekEmailButton" class="btn btn-primary mb-2">Send</button>
+            </form>
+            <p id="MassageAbutEmail"></p>
+        </div>
+</div>
+
+<div id="UserPersonId"></div>
+
+
+
+<footer id="footer">
+  
+    <a href=" https://asalef10.github.io/fullstack-developer/"> <img
+            src="https://cdn.iconscout.com/icon/free/png-512/github-154-675675.png" alt="GithubLogo"> </a>
+    <a href="https://www.facebook.com/profile.php?id=100005185893002"> <img
+            src="https://i.pinimg.com/originals/27/d5/42/27d542e2e2626de4c08ee3d84aaabb7b.png" alt="facebookLogo">
+        <a href="https://www.instagram.com/"> <img
+                src="https://freevectoricon.com/wp-content/uploads/2020/08/instagram-icon-vector-white-321580-free-icons-library-1024x1024.jpg"
+                alt="instagramLogo">
+            <a href="https://www.linkedin.com/in/asalef-alena-a043251ba/"> <img
+                    src="https://seeklogo.com/images/L/linkedin-black-icon-logo-ECC426C572-seeklogo.com.png"
+                    alt="LinkdinLogo"> </a>
+
+
+                    Copyright ©2021  Inc. All rights reserved.
+                    Privacy & Legal Policies
+</footer>
+
+<script src="main.js"></script>
+</body>
