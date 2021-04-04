@@ -9,7 +9,7 @@ function fetchFunction() {
         .then((response) => { return response.json() })
 }
 
-class User {
+class UserIdObject {
     constructor(firstName, lastName, email, phone, age) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -26,8 +26,8 @@ async function functionGetUser() {
         UserArry = await fetchFunction()
         UserArry.forEach(element => {
 
-           let userIDpersonObject = new User(element.name.first, element.name.last, element.email, element.phone, element.age)
-           
+           let userIDpersonObject = new UserIdObject(element.name.first, element.name.last, element.email, element.phone, element.age)
+
             console.log(userIDpersonObject);
 
             UsersCard.innerHTML += ` 
