@@ -9,14 +9,32 @@ function fetchFunction() {
         .then((response) => { return response.json() })
 }
 
+class User {
+    constructor(firstName, lastName, email, phone, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.age = age;
+
+    }
+}
+
+
 async function functionGetUser() {
     try {
         UserArry = await fetchFunction()
         UserArry.forEach(element => {
+
+           let userIDpersonObject = new User(element.name.first, element.name.last, element.email, element.phone, element.age)
+           
+            console.log(userIDpersonObject);
+
             UsersCard.innerHTML += ` 
             <div class="card" <div id="UserID${UserID}" style="width: 17rem;">
             <img src=" ${element.picture} " class="card-img-top" alt="photoUserId">
              <div class="card-body">
+             
             <h5 class="card-title"> FullName: ${element.name.first}  ${element.name.last}</h5><br>
             <p class="card-text"> Email: ${element.email}<br>
             PhoneNumber: <br> ${element.phone}<br>
@@ -27,6 +45,7 @@ async function functionGetUser() {
          </div>
          </div>
          `
+
         });
     }
 
@@ -35,7 +54,6 @@ async function functionGetUser() {
     }
 
 }
-
 
 
 function displayNoneRegistrationform() {
@@ -98,6 +116,7 @@ buttonNewUserId.addEventListener('click', () => {
 
 chekEmailButton.onclick = function chekEmail() {
 
+
     if (FirstEmail.value == TwoEmail.value) {
         return true
     } else {
@@ -105,6 +124,7 @@ chekEmailButton.onclick = function chekEmail() {
         return false
     }
 }
+
 
 
 
@@ -146,3 +166,17 @@ buttonHomePage.addEventListener('click', () => {
     UsersCard.style = "display:flex;"
 
 })
+
+
+
+
+// class Users {
+//     constructor(UserName, UserLastName, FirstEmail, TwoEmail, pwd2) {
+//         this.UserName = UserName.value;
+//         this.UserLastName = UserLastName.value;
+//         this.FirstEmail = FirstEmail.value;
+//         this.TwoEmail = TwoEmail.value;
+//         this.pwd2 = pwd2.value;
+
+//     }
+// }
